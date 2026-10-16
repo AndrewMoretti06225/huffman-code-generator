@@ -53,3 +53,10 @@ The tree-merge step uses a (weight, height) tie-breaker so that when two
 subtrees have equal weight, the shallower one is preferred. This keeps code
 lengths close to the theoretical minimum without a separate length-limiting
 pass.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
