@@ -1,6 +1,6 @@
 {
   "name": "huffman-code-generator",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Generates a Huffman code from symbol frequencies",
   "type": "module",
   "main": "src/index.js",
